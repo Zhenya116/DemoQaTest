@@ -68,11 +68,13 @@ public class DemoQaTest {
             // Проверки результатов
             $(".modal-content").shouldBe(visible);
             $(byText("Thanks for submitting the form")).shouldBe(visible);
+            System.out.println("Nice job");
 
         } catch (Exception e) {
             // Делаем скриншот при ошибке
             Selenide.screenshot("error_screenshot");
             throw e;
+
         }
     }
 }
